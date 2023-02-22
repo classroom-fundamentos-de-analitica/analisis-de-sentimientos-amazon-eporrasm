@@ -148,7 +148,7 @@ def pregunta_04():
 
     # Retorne el mejor modelo
     return gridSearchCV
-
+pregunta_04()
 
 def pregunta_05():
     """
