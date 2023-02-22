@@ -113,7 +113,7 @@ def pregunta_04():
         stop_words="english",
         token_pattern=r"\b[a-z]+\b",
         binary=True,
-        max_df=1,
+        max_df=1.0,
         min_df=5,
     )
 
@@ -129,7 +129,7 @@ def pregunta_04():
     # considerar 10 valores entre 0.1 y 1.0 para el parámetro alpha de
     # BernoulliNB.
     param_grid = {
-        "BernoulliNB__alpha": np.linspace(0.1, 1, 10),
+        "BernoulliNB__alpha": np.linspace(0.1, 1.0, 10),
     }
 
     # Defina una instancia de GridSearchCV con el pipeline y el diccionario de
