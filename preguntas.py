@@ -22,7 +22,7 @@ def pregunta_01():
     # Etiquete la primera columna como `msg` y la segunda como `lbl`. Esta función
     # retorna el dataframe con las dos columnas.
     df = pd.read_csv("amazon_cells_labelled.tsv", sep="\t", header=None, names=["msg", "lbl"])
-    print(df)
+
     # Separe los grupos de mensajes etiquetados y no etiquetados.
     df_tagged = df[df["lbl"].notnull()]
     df_untagged = df[df["lbl"].isnull()]
@@ -148,7 +148,7 @@ def pregunta_04():
 
     # Retorne el mejor modelo
     return gridSearchCV
-pregunta_04()
+
 
 def pregunta_05():
     """
